@@ -1,0 +1,63 @@
+Table empresa{
+id_empresa int
+nombre varchar
+estado varchar
+id_segmento int
+  
+}
+
+Table sede{
+  id_sede int 
+  id_empresa int
+  id_departamento int
+}
+
+table departamento{
+  id_departamento int
+  nombre varchar
+}
+
+table alcance{
+  id_segmento int
+  nombre_segmento varchar
+  nombre_tecnologia varchar
+}
+
+table rangos{
+  id_rango int
+  rango_velocidad varchar
+}
+
+table rango_empresa{
+  id_rango_empresa int
+  id_rango int
+  id_empresa int
+}
+
+
+Ref: "empresa"."id_empresa" < "sede"."id_empresa"
+
+
+
+Ref: "departamento"."id_departamento" < "sede"."id_departamento"
+
+
+
+
+Ref: "segmento"."id_segmento" - "empresa"."id_segmento"
+
+https://dbdiagram.io/d/63e6bf15296d97641d801844
+modelos
+filtros en las tablas correspondientes.
+insersion en la db.
+
+
+DevOps
+
+TIPOS DE GIT:
+https://www.atlassian.com/git/tutorials/comparing-workflows
+https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development
+
+Profesor una duda, que es un pull request?
+
+Una disculpa profesor, por no haber avanzado con el proyecto este fin de semana, ya que no me sentí muy bien de salud, pero para mañana si avanzaré.
