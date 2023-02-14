@@ -22,7 +22,7 @@ alcance_schema= AlcanceSchema(many=True)
 #######################
 class EmpresaSchema(ma.Schema):
     class Meta:
-        fields= ('id_empresa', 'nombre', 'estado', 'id_segmento')
+        fields= ('id_empresa', 'ruc', 'nombre', 'estado', 'id_segmento')
         model= Empresa
 
 empresa_schema= EmpresaSchema()

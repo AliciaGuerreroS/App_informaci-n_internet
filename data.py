@@ -1,67 +1,20 @@
-separador = ","
-with open("data_internet.csv", encoding="utf-8") as archivo:
+import csv
+def buscar_filtrado():
+    with open("data_internet.csv", encoding= 'utf-8') as f:
+        archivo= csv.reader(f)
         next(archivo)
-        listarucempresa= []
-        listanombrempresa= []
-        listaestadosunat= []
-        listadepartamento= []
-        listasegmento= []
-        listatecnologia= []
-        listarangovelocidad= []
+        lista_elementos= []
+        datos_filtrado= []
+
         for linea in archivo:
-            linea= linea.rstrip("\n")
-            columnas= linea.split(separador)
-            rucEmpresa= columnas[0]
-            nombreEmpresa= columnas[1]
-            estadoSunat= columnas[2]
-            departamento= columnas[3]
-            segmento= columnas[4]
-            tecnologia= columnas[5]
-            rango_velocidad= columnas[6]
-        for i in rucEmpresa:
-            print(i)
-        # for i in listarucempresa:
-        #     if i not in listarucempresa:
-        #         listarucempresa.append(i)
-        # print(listarucempresa)
+            elementos= linea[6]
+            if elementos not in lista_elementos:
+                lista_elementos.append(elementos)
+                for i in lista_elementos:
+                    if i == elementos:
+                        datos_filtrado.append(linea)
 
-
-# def obtenerCsvComoDiccionarios(data_internet):
-#     separador = ","
-#     with open(data_internet, encoding="utf-8") as archivo:
-#         next(archivo)
-#         listas= []
-
-#         for linea in archivo:
-#             linea = linea.rstrip("\n")
-#             columnas = linea.split(separador)
-#             rucEmpresa= columnas[0]
-#             nombreEmpresa= columnas[1]
-#             estadoSunat= columnas[2]
-#             departamento= columnas[3]
-#             segmento= columnas[4]
-#             tecnologia= columnas[5]
-#             rango_velocidad= columnas[6]
-#             listas.append({
-#                 "ruc_empresa": rucEmpresa,
-#                 "nombre_empresa": nombreEmpresa,
-#                 "estado_sunat": estadoSunat,
-#                 "departamento": departamento,
-#                 "segmento": segmento,
-#                 "tecnologia": tecnologia,
-#                 "rango_velocidad": rango_velocidad
-#             })
-#         # return (len(listas))
-#         return listas
-
-# # print(obtenerCsvComoDiccionarios("data_internet.csv"))
-
-# def principal():
-#     listas= obtenerCsvComoDiccionarios("data_internet.csv")
-#     lista_filtrados= []
-#     for lista in listas:
-#         if lista not in lista_filtrados:
-#             lista_filtrados.append(lista)
-#     print(lista_filtrados)
-#     print(len(lista_filtrados))
-# principal()
+        print(len(datos_filtrado))
+        print(datos_filtrado[0])
+        # print(lista_elementos)
+buscar_filtrado()
