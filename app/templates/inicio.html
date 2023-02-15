@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+
+informacion internet
+
+{% endblock titulo %}
+
+{% block tituloh1 %}
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 d-flex justify-content-center">
+                <h1 class="text-center">Listado de Empresas</h1>
+            </div>
+        </div>
+    </div>
+    {% endblock tituloh1 %}
+
+    {% block contenido %}
+    <br>
+    <table class="table table-dark">
+        <thead>
+            <th scope="col">#</th>
+            <th scope="col">RUC</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">SUNAT</th>
+            <th scope="col">Id_segmento</th>
+        </thead>
+        <tbody>
+            {% set count = namespace(value=1) %}
+
+            {% for empresa in todas_empresas %}
+              <tr>
+                <th scope="row"> {{ count.value }}
+                  {% set count.value = count.value + 1 %}</th>
+            <td class="table-active"> {{empresa.ruc}}</td>
+            <td scope="row">{{empresa.nombre}}</td>
+            <td class="table-active">{{empresa.estado}}</td>
+            <td>{{empresa.id_segmento}}</td>
+          </tr>
+
+          {% endfor %}
+    
+     {% endblock contenido %}

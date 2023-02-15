@@ -7,6 +7,8 @@ from app.models.sede import Sede
 from app.models.departamento import Departamento
 from app.models.rango_empresa import Rangoempresa
 from app.models.rango import Rango
+from flask import render_template, request, jsonify
+
 
 app=create_app()
 ma= Marshmallow(app)
@@ -74,15 +76,44 @@ rango_schema= RangoSchema()
 rango_schema= RangoSchema(many=True)
 
 
-@app.route('/',) #ruta raiz
+@app.route('/',methods=['GET']) #ruta raiz
 def index():
-    return "Inicio de una gran aventura"
+    todas_empresas= Empresa.query.all()
+    return render_template('inicio.html', todas_empresas= todas_empresas)
+
+@app.route('/verSede',methods=['GET']) #ruta raiz
+def ver_sede():
+    sede_depa= Departamento.query.all()
+    return render_template('versede.html', sede_depa= sede_depa)
+
+###endpoint para ver las sedes que existen
+@app.route("/sedes", methods=['GET'])
+def ver_sedes():
+    departamento= Departamento.query.all()
+    resultado= departamento_schema.dump(departamento)
+    return jsonify(resultado)
+
+###endpoint para ver las empresas que se encuentran en cada departamento
+@app.route("/empresa_departamento", methods=['GET'])
+def ver_empresa_departamento():
+    sedes= Sede.query.all()
+    resultado= sede_schema.dump(sedes)
+    return jsonify(resultado)
+
+###endpoint para ver las empresas que existen
+@app.route("/empresas", methods=['GET'])
+def ver_empresas():
+    empresas= Empresa.query.all()
+    resultado= empresa_schema.dump(empresas)
+    return jsonify(resultado)
 
 
 db.init_app(app)
 with app.app_context():
     db.create_all()
     print("Base de datos conectado!")
+
+
 
 if __name__ == "__main__":
     app.run(debug=True)
