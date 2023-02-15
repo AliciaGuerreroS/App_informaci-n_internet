@@ -81,10 +81,11 @@ def index():
     todas_empresas= Empresa.query.all()
     return render_template('inicio.html', todas_empresas= todas_empresas)
 
-@app.route('/verSede',methods=['GET']) #ruta raiz
-def ver_sede():
-    sede_depa= Departamento.query.all()
-    return render_template('versede.html', sede_depa= sede_depa)
+# @app.route('/verSede',methods=['GET']) 
+# def ver_sede():
+
+#     sede_depa= Departamento.query.all()
+#     return render_template('versede.html', sedes = sede_depa)
 
 ###endpoint para ver las sedes que existen
 @app.route("/sedes", methods=['GET'])

@@ -19,7 +19,7 @@ informacion internet
 
     {% block contenido %}
     <br>
-    <table class="table table-dark">
+    <table class="table table-striped table-danger">
         <thead>
             <th scope="col">#</th>
             <th scope="col">RUC</th>
@@ -34,9 +34,9 @@ informacion internet
               <tr>
                 <th scope="row"> {{ count.value }}
                   {% set count.value = count.value + 1 %}</th>
-            <td class="table-active"> {{empresa.ruc}}</td>
-            <td scope="row">{{empresa.nombre}}</td>
-            <td class="table-active">{{empresa.estado}}</td>
+            <td> {{empresa.ruc}}</td>
+            <td>{{empresa.nombre}}</td>
+            <td>{{empresa.estado}}</td>
             <td>{{empresa.id_segmento}}</td>
           </tr>
 
