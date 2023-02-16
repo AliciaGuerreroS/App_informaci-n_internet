@@ -44,7 +44,11 @@ Ref: "departamento"."id_departamento" < "sede"."id_departamento"
 
 
 
-Ref: "segmento"."id_segmento" - "empresa"."id_segmento"
+Ref: "alcance"."id_segmento" - "empresa"."id_segmento"
+
+Ref: "empresa"."id_empresa" < "rango_empresa"."id_empresa"
+
+Ref: "rangos"."id_rango" < "rango_empresa"."id_rango"
 
 https://dbdiagram.io/d/63e6bf15296d97641d801844
 modelos
