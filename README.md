@@ -11,16 +11,18 @@
 
 - `Funcionalidad 2`: EndPoint= http://127.0.0.1:5000/sedes. Descripción:  Endpoint para ver las sedes que existen.
 
--`Funcionalidad 3`: EndPoint=http://127.0.0.1:5000/empresa_departamento. Descripcion: Endpoint para ver las empresas que se encuentran en cada departamento.
+- `Funcionalidad 3`: EndPoint=http://127.0.0.1:5000/empresa_departamento. Descripcion: Endpoint para ver las empresas que se encuentran en cada departamento.
 
 - `Funcionalidad 4`: EndPoint=http://127.0.0.1:5000/empresas. Descripcion:endpoint para ver las empresas que existen.
 
 \## 📁 Acceso al proyecto
 
-**Crea el entorno virtual**
-**Instala las dependencias**
-**Coloca tus credenciales en el documento .env**
+- **Crea el entorno virtual**
+- **Instala las dependencias**
+- **Coloca tus credenciales en el documento .env**
 
 \## 🛠️ Abre y ejecuta el proyecto
 
 **flask run**
+
+
