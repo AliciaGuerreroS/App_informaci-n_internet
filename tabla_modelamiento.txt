@@ -50,18 +50,4 @@ Ref: "empresa"."id_empresa" < "rango_empresa"."id_empresa"
 
 Ref: "rangos"."id_rango" < "rango_empresa"."id_rango"
 
-https://dbdiagram.io/d/63e6bf15296d97641d801844
-modelos
-filtros en las tablas correspondientes.
-insersion en la db.
 
-
-DevOps
-
-TIPOS DE GIT:
-https://www.atlassian.com/git/tutorials/comparing-workflows
-https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development
-
-Profesor una duda, que es un pull request?
-
-Una disculpa profesor, por no haber avanzado con el proyecto este fin de semana, ya que no me sentí muy bien de salud, pero para mañana si avanzaré.

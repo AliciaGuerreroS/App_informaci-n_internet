@@ -1,4 +1,5 @@
 from app import create_app
+from flask import Flask
 from app.db import db
 from flask_marshmallow import Marshmallow
 from app.models.alcance import Alcance
