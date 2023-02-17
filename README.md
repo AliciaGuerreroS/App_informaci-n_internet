@@ -25,4 +25,17 @@
 
 **flask run**
 
+<h2 align="center"> Nota:  </h2>
+
+
+- ` Modelo de E-R de los datos dados, VER: tabla_modelamiento.txt`
+
+- ` Lectura del archivo excel para la insercion de datos en la db, VER: data.py`
+
+- ` Agrego un repositorio sobre el intento de la creación de la App con la db de postgresql, VER: https://github.com/AliciaGuerreroS/App-informacion_internet_postgresql.git (Incoveniente: problemas de conexion del pgAdmin con el servidor)`
+
+
+
+
+
 
