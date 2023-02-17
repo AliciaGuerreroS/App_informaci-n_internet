@@ -5,7 +5,7 @@
     Este es una App, que gestiona la información  de algunas empresas de Internet.
 </p>
 
-:construction: Proyecto desplegado :construction:
+:construction: Proyecto Finalizado :construction:
 
 - `Funcionalidad 1`: EndPoint= http://127.0.0.1:5000 Ruta raíz. Descripción: Generar un template en la ruta raíz(index).
 
