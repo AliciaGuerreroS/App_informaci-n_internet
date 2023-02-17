@@ -34,6 +34,8 @@
 
 - ` Agrego un repositorio sobre el intento de la creación de la App con la db de postgresql, VER: https://github.com/AliciaGuerreroS/App-informacion_internet_postgresql.git (Incoveniente: problemas de conexion del pgAdmin con el servidor)`
 
+- ` Id de contenedor creado de la App, VER: e922e6bb350277b178a45140c4a44d61d8c9a9ae1d028a75d91c861cccc74575 (Inconveniente: ModuleNotFoundError: No module named 'MySQLdb')`
+
 
 
 
