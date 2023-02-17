@@ -7,7 +7,7 @@
 
 :construction: Proyecto desplegado :construction:
 
-- `Funcionalidad 1`: EndPoint= http://127.0.0.1:5000 Ruta raíz. Descripción: Generar un template en la ruta raíz(index), cuando el cliente ingrese al sitio, vea el listado de las empresas(Como recommendation, se puede usar Datatable).
+- `Funcionalidad 1`: EndPoint= http://127.0.0.1:5000 Ruta raíz. Descripción: Generar un template en la ruta raíz(index).
 
 - `Funcionalidad 2`: EndPoint= http://127.0.0.1:5000/sedes. Descripción:  Endpoint para ver las sedes que existen.
 

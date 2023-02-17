@@ -37,12 +37,7 @@ table rango_empresa{
 
 Ref: "empresa"."id_empresa" < "sede"."id_empresa"
 
-
-
 Ref: "departamento"."id_departamento" < "sede"."id_departamento"
-
-
-
 
 Ref: "alcance"."id_segmento" - "empresa"."id_segmento"
 
